@@ -1,0 +1,29 @@
+import java.applet.Applet;
+import java.awt.Color;
+import java.awt.Graphics;
+
+public class GraphicsEx extends Applet {
+
+    public void init() {
+        setBackground(Color.RED);
+    }
+
+    public void start() {
+    }
+
+    public void paint(Graphics g) {
+        g.setColor(Color.BLUE);
+        g.drawOval(45, 50, 100, 100);
+        g.fillOval(70, 75, 20, 20);
+        g.fillOval(105, 75, 20, 20);
+        g.setColor(Color.WHITE);
+        g.drawLine(80, 120, 115, 120);
+        g.fillArc(82, 100, 32, 40, 0, -180);
+    }
+
+    public void stop() {
+    }
+
+    public void destroy() {
+    }
+}

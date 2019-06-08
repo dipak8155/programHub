@@ -1,0 +1,35 @@
+public class UserDefinedMethodShow{
+
+    public static void main(String[] args) {
+        B o = new B();
+        C w = new C();
+          // o.show1();
+        // w.show2();
+        int d = o.show1() + w.show2();
+        System.out.println("ans is " + d);
+
+    }
+}
+class B {
+
+    int i = 20;
+    int j = 30;
+
+    int show1() {
+        System.out.println("i=" + i + "   j=" + j);
+        return i + j;
+
+    }
+}
+
+class C {
+
+    int k = 30;
+
+    int show2() {
+        System.out.println("k=" + k);
+        return k;
+    }
+
+}
+

@@ -1,0 +1,26 @@
+import java.applet.Applet;
+import java.awt.Graphics;
+
+public class SimpleApplet extends Applet {
+
+    @Override
+    public void init() {
+    }
+
+    @Override
+    public void start() {
+    }
+
+    @Override
+    public void paint(Graphics g) {
+        g.drawString("JAY HIND", 100, 100);
+    }
+
+    @Override
+    public void stop() {
+    }
+
+    @Override
+    public void destroy() {
+    }
+}

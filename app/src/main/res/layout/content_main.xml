@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <ScrollView
+        android:id="@+id/sv_scroll_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/footer"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2.0dip"
+            android:layout_marginRight="2.0dip"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6.0dip"
+                android:background="@android:color/white"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                tools:ignore="ExtraText">
+
+                <Button
+                    android:id="@+id/btn_c"
+                    android:layout_width="@dimen/btn_width_150"
+                    android:layout_height="@dimen/btn_height_100"
+
+                    android:layout_marginRight="@dimen/btn_right_margin"
+                    android:layout_weight="1.0"
+                    android:background="#F5ABAB"
+                    android:drawableLeft="@drawable/android"
+                    android:gravity="center"
+                    android:padding="@dimen/btn_text_paddig"
+                    android:text="C"
+                    android:textColor="@android:color/white"
+                    android:textSize="22dp"
+                    tools:ignore="ButtonStyle,HardcodedText,OnClick,RtlHardcoded,SpUsage" />
+
+                <Button
+                    android:id="@+id/btn_acp"
+                    android:layout_width="@dimen/btn_width_150"
+                    android:layout_height="@dimen/btn_height_100"
+                    android:layout_marginLeft="@dimen/btn_right_margin"
+                    android:layout_weight="1.0"
+                    android:background="#816464"
+                    android:gravity="center"
+                    android:padding="@dimen/btn_text_paddig"
+                    android:text="Advance C"
+                    android:textColor="@android:color/white"
+                    android:textSize="22dp"
+                    tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded,SpUsage" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6.0dip"
+                android:background="@android:color/white"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_cpp"
+                    android:layout_width="@dimen/btn_width_150"
+                    android:layout_height="@dimen/btn_height_100"
+                    android:layout_marginRight="@dimen/btn_right_margin"
+                    android:layout_weight="1.0"
+                    android:background="#696565"
+                    android:gravity="center"
+                    android:padding="@dimen/btn_text_paddig"
+                    android:text="C ++"
+                    android:textColor="@android:color/white"
+                    android:textSize="22dp"
+                    tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded,SpUsage" />
+
+                <Button
+                    android:id="@+id/btn_java"
+                    android:layout_width="@dimen/btn_width_150"
+                    android:layout_height="@dimen/btn_height_100"
+                    android:layout_marginLeft="@dimen/btn_right_margin"
+                    android:layout_weight="1.0"
+                    android:background="#E7AD9C"
+                    android:gravity="center"
+                    android:padding="@dimen/btn_text_paddig"
+                    android:text="JAVA"
+                    android:textColor="@android:color/white"
+                    android:textSize="22dp"
+                    tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded,SpUsage" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6.0dip"
+                android:background="@android:color/white"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_ajava"
+                    android:layout_width="@dimen/btn_width_150"
+                    android:layout_height="@dimen/btn_height_100"
+                    android:layout_marginRight="@dimen/btn_right_margin"
+                    android:layout_weight="1.0"
+                    android:background="#D64115"
+                    android:gravity="center"
+                    android:padding="@dimen/btn_text_paddig"
+                    android:text="Advance JAVA"
+                    android:textColor="@android:color/white"
+                    android:textSize="22dp"
+                    tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded,SpUsage" />
+
+                <Button
+                    android:id="@+id/btn_dotnet"
+                    android:layout_width="@dimen/btn_width_150"
+                    android:layout_height="@dimen/btn_height_100"
+                    android:layout_marginLeft="@dimen/btn_right_margin"
+                    android:layout_weight="1.0"
+                    android:background="#F1AC69"
+                    android:gravity="center"
+                    android:padding="@dimen/btn_text_paddig"
+                    android:text=".NET"
+                    android:textColor="@android:color/white"
+                    android:textSize="22dp"
+                    tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded,SpUsage" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6.0dip"
+                android:background="@android:color/white"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_php"
+                    android:layout_width="@dimen/btn_width_150"
+                    android:layout_height="@dimen/btn_height_100"
+                    android:layout_marginRight="@dimen/btn_right_margin"
+                    android:layout_weight="1.0"
+                    android:background="#61542F"
+                    android:gravity="center"
+                    android:padding="@dimen/btn_text_paddig"
+                    android:text="PHP"
+                    android:textColor="@android:color/white"
+                    android:textSize="22dp"
+                    tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded,SpUsage" />
+
+                <Button
+                    android:id="@+id/btn_sql"
+                    android:layout_width="@dimen/btn_width_150"
+                    android:layout_height="@dimen/btn_height_100"
+                    android:layout_marginLeft="@dimen/btn_right_margin"
+                    android:layout_weight="1.0"
+                    android:background="#57743B"
+                    android:gravity="center"
+                    android:padding="@dimen/btn_text_paddig"
+                    android:text="SQL"
+                    android:textColor="@android:color/white"
+                    android:textSize="22dp"
+                    tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded,SpUsage" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6.0dip"
+                android:background="@android:color/white"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_servlet"
+                    android:layout_width="@dimen/btn_width_150"
+                    android:layout_height="@dimen/btn_height_100"
+                    android:layout_marginRight="@dimen/btn_right_margin"
+                    android:layout_weight="1.0"
+                    android:background="#B2F376"
+                    android:gravity="center"
+                    android:padding="@dimen/btn_text_paddig"
+                    android:text="SERVLET"
+                    android:textColor="@android:color/white"
+                    android:textSize="22dp"
+                    tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded,SpUsage" />
+
+                <Button
+                    android:id="@+id/btn_jsp"
+                    android:layout_width="@dimen/btn_width_150"
+                    android:layout_height="@dimen/btn_height_100"
+                    android:layout_marginLeft="@dimen/btn_right_margin"
+                    android:layout_weight="1.0"
+                    android:background="#1F705D"
+                    android:gravity="center"
+                    android:padding="@dimen/btn_text_paddig"
+                    android:text="JSP"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp"
+                    tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6.0dip"
+                android:background="@android:color/white"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/tvGenerics"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/btn_height_100"
+                    android:layout_weight="1.0"
+                    android:background="#2EF562"
+                    android:gravity="center"
+                    android:padding="@dimen/btn_text_paddig"
+                    android:text="JAVA GENERICS"
+                    android:textColor="@android:color/white"
+                    android:textSize="22dp"
+                    tools:ignore="HardcodedText,SpUsage" />
+
+                <Button
+                    android:id="@+id/tvMemoryMgmt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/btn_height_100"
+                    android:layout_marginTop="6.0dip"
+                    android:layout_weight="1.0"
+                    android:background="#2E684A"
+                    android:gravity="center"
+                    android:padding="@dimen/btn_text_paddig"
+                    android:text="MEMORY MANAGEMENT"
+                    android:textColor="@android:color/white"
+                    android:textSize="22dp"
+                    tools:ignore="HardcodedText,SpUsage" />
+
+                <Button
+                    android:id="@+id/tvDesignPattern"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/btn_height_100"
+                    android:layout_marginTop="6.0dip"
+                    android:layout_weight="1.0"
+                    android:background="#2BC298"
+                    android:gravity="center"
+                    android:padding="@dimen/btn_text_paddig"
+                    android:text="DESIGN PATTERNS"
+                    android:textColor="@android:color/white"
+                    android:textSize="22dp"
+                    tools:ignore="HardcodedText,SpUsage" />
+
+                <Button
+                    android:id="@+id/tvJunitAndMockito"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/btn_height_100"
+                    android:layout_marginTop="6.0dip"
+                    android:layout_weight="1.0"
+                    android:background="#4CB397"
+                    android:gravity="center"
+                    android:padding="@dimen/btn_text_paddig"
+                    android:text="JUNIT - MOCKITO"
+                    android:textColor="@android:color/white"
+                    android:textSize="22dp"
+                    tools:ignore="HardcodedText,SpUsage" />
+
+                <Button
+                    android:id="@+id/tvAdvancedTopics"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/btn_height_100"
+                    android:layout_marginTop="6.0dip"
+                    android:layout_weight="1.0"
+                    android:background="#2A547E"
+                    android:gravity="center"
+                    android:padding="@dimen/btn_text_paddig"
+                    android:text="ADVANCED TOPICS"
+                    android:textColor="@android:color/white"
+                    android:textSize="22dp"
+                    tools:ignore="HardcodedText,SpUsage" />
+
+                <Button
+                    android:id="@+id/tvMagazine"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/btn_height_100"
+                    android:layout_marginTop="6.0dip"
+                    android:layout_weight="1.0"
+                    android:background="#1C7B9E"
+                    android:gravity="center"
+                    android:padding="@dimen/btn_text_paddig"
+                    android:text="JAVA MAGAZINES"
+                    android:textColor="@android:color/white"
+                    android:textSize="22dp"
+                    tools:ignore="HardcodedText,SpUsage" />
+
+                <Button
+                    android:id="@+id/tvSendUsThanksEmail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70.0dip"
+                    android:layout_marginTop="6.0dip"
+                    android:layout_weight="1.0"
+                    android:background="#1C41B6"
+                    android:gravity="center"
+                    android:padding="@dimen/btn_text_paddig"
+                    android:text="SEND US THANKS EMAIL"
+                    android:textColor="@android:color/white"
+                    android:textSize="17.0dip"
+                    tools:ignore="HardcodedText,SpUsage" />
+
+                <Button
+                    android:id="@+id/tvDownloadPaid"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70.0dip"
+                    android:layout_marginTop="6.0dip"
+                    android:layout_weight="1.0"
+                    android:background="#8B480C8A"
+                    android:gravity="center"
+                    android:padding="@dimen/btn_text_paddig"
+                    android:text="DOWNLOAD SAME APP WITHOUT ADS"
+                    android:textColor="@android:color/white"
+                    android:textSize="17.0dip"
+                    tools:ignore="HardcodedText,SpUsage" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6.0dip"
+                android:background="@android:color/white"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/tvRateApp"
+                    android:layout_width="@dimen/btn_width_150"
+                    android:layout_height="@dimen/btn_height_100"
+                    android:layout_marginRight="@dimen/btn_right_margin"
+                    android:layout_weight="1.0"
+                    android:background="#B41919"
+                    android:gravity="center"
+                    android:padding="@dimen/btn_text_paddig"
+                    android:text="RATE APP"
+                    android:textColor="@android:color/white"
+                    android:textSize="22dp"
+                    tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded,SpUsage" />
+
+                <Button
+                    android:id="@+id/tvShareApp"
+                    android:layout_width="@dimen/btn_width_150"
+                    android:layout_height="@dimen/btn_height_100"
+                    android:layout_marginLeft="@dimen/btn_right_margin"
+                    android:layout_weight="1.0"
+                    android:background="#9D24B6"
+                    android:gravity="center"
+                    android:padding="@dimen/btn_text_paddig"
+                    android:text="SHARE APP"
+                    android:textColor="@android:color/white"
+                    android:textSize="22dp"
+                    tools:ignore="ButtonStyle,RtlHardcoded,SpUsage" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+    </RelativeLayout>
+</RelativeLayout>

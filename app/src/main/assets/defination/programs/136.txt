@@ -1,0 +1,16 @@
+
+public class GarbageCollectionEx{
+
+    public static void main(String[] args) {
+        Runtime rt = Runtime.getRuntime();
+        long s1 = rt.freeMemory();
+        
+        System.out.println("Free memory in JVM before garbage collection = "+s1);
+        rt.gc();
+        long s2 = rt.freeMemory();
+        System.out.println("Free memory in JVM after garbage collection = "+rt.freeMemory());
+        System.out.println("\nMemory Gained : "+(s2 - s1));
+        
+    }
+
+}

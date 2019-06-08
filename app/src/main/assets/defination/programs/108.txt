@@ -1,0 +1,285 @@
+import java.applet.Applet;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.image.ImageObserver;
+import java.text.AttributedCharacterIterator;
+import java.util.Random;
+
+
+public class AwtGame extends Frame implements ActionListener{
+
+ 
+    MenuBar mb = new MenuBar();
+    Menu m1 = new Menu("name");
+    MenuItem mi1 = new MenuItem("Player 1");
+    MenuItem mi2 = new MenuItem("Player 2");
+    Menu m2 = new Menu("File");
+    MenuItem mi3 = new MenuItem("reset");
+    MenuItem mi4 = new MenuItem("exit");
+    Menu m3 = new Menu("color");
+    Menu mi_pl1 = new Menu("Player 1");
+    Menu mi_pl2 = new Menu("Player 2");
+    MenuItem mi_co1 = new MenuItem("Red");
+    MenuItem mi_co2 = new MenuItem("Green");
+    MenuItem mi_co3 = new MenuItem("Blue");
+    MenuItem mi_co4 = new MenuItem("Yellow");
+    MenuItem mi_co5 = new MenuItem("Orange");
+    MenuItem mi_co6 = new MenuItem("Red");
+    MenuItem mi_co7 = new MenuItem("Green");
+    MenuItem mi_co8 = new MenuItem("Blue");
+    MenuItem mi_co9 = new MenuItem("Yellow");
+    MenuItem mi_co10 = new MenuItem("Orange");
+    Color c1, c2;
+    Button b[] = new Button[51];
+    Button b1 = new Button("Press");
+    Button b3 = new Button("Submit");
+    int i, temp1 = 0, temp2 = 0, total1 = 0, total2 = 0, count = 0;
+    Random r = new Random();
+    Label l1 = new Label("1st Player:");
+    Label l2 = new Label("2nd Player:");
+    Label l3 = new Label("1st Player total:");
+    Label l4 = new Label("2nd Player total:");
+    Label l5 = new Label("1st Player Name:");
+    Label l6 = new Label("2nd Player Name:");
+    TextField t1 = new TextField("1st");
+    TextField t2 = new TextField("2nd");
+    TextField t3 = new TextField("result");
+    TextField t4 = new TextField("1st total");
+    TextField t5 = new TextField("2nd total");
+    TextField t6 = new TextField();
+    TextField t7 = new TextField();
+    String s1;
+    String s2;
+    
+   
+    AwtGame() {
+         
+        for (int i = 1; i <= 50; i++) {
+            b[i] = new Button("" + (i));
+            add(b[i]);
+            b[i].setVisible(false);
+            b[i].setBackground(Color.LIGHT_GRAY);
+        }
+       
+        add(l5);
+        add(t6);
+        add(l6);
+        add(t7);
+        add(b3);
+        b3.addActionListener(this);
+        mb.add(m1);
+        setMenuBar(mb);
+        m1.add(mi1);
+        mi1.addActionListener(this);
+        m1.add(mi2);
+        mi2.addActionListener(this);
+        mb.add(m2);
+        m2.add(mi3);
+        mi3.addActionListener(this);
+
+        mi_pl1.add(mi_co6);
+        mi_co6.addActionListener(this);
+        mi_co7.addActionListener(this);
+        mi_co8.addActionListener(this);
+        mi_co9.addActionListener(this);
+        mi_co10.addActionListener(this);
+        mi_pl1.add(mi_co7);
+        mi_pl1.add(mi_co8);
+        mi_pl1.add(mi_co9);
+        mi_pl1.add(mi_co10);
+
+
+        mi_pl2.add(mi_co1);
+        mi_co1.addActionListener(this);
+        mi_pl2.add(mi_co2);
+        mi_co2.addActionListener(this);
+        mi_pl2.add(mi_co3);
+        mi_co3.addActionListener(this);
+        mi_pl2.add(mi_co4);
+        mi_co4.addActionListener(this);
+        mi_pl2.add(mi_co5);
+        mi_co5.addActionListener(this);
+
+            
+        m3.add(mi_pl1);
+        m3.add(mi_pl2);
+        mb.add(m3);
+
+        m2.add(mi4);
+        mi4.addActionListener(this);
+        add(l1);
+        l1.setVisible(false);
+        add(t1);
+        t1.setVisible(false);
+        add(l3);
+        l3.createImage(50, 80);
+        l3.setVisible(false);
+        add(t4);
+        t4.setVisible(false);
+        add(l2);
+        l2.setVisible(false);
+        add(t2);
+        t2.setVisible(false);
+        add(l4);
+        l4.setVisible(false);
+        add(t5);
+        t5.setVisible(false);
+        add(b1);
+        b1.setVisible(false);
+        add(t3);
+        t3.setVisible(false);
+        b1.addActionListener(this);
+        show();
+        setLayout(new GridLayout(7, 10));
+        setSize(600, 600);
+    }
+
+    public static void main(String[] args) {
+        AwtGame ob1 = new AwtGame();
+         
+
+    }
+   
+
+    public void actionPerformed(ActionEvent e) {
+
+
+        if (e.getSource() == mi_co1) {
+            c1 = c1.red;
+        }
+        if (e.getSource() == mi_co2) {
+            c1 = c1.green;
+        }
+        if (e.getSource() == mi_co3) {
+            c1 = c1.blue;
+        }
+        if (e.getSource() == mi_co4) {
+            c1 = c1.yellow;
+        }
+        if (e.getSource() == mi_co5) {
+            c1 = c1.orange;
+        }
+        if (e.getSource() == mi_co6) {
+            c2 = c2.red;
+        }
+        if (e.getSource() == mi_co7) {
+            c2 = c2.green;
+        }
+        if (e.getSource() == mi_co8) {
+            c2 = c2.blue;
+        }
+        if (e.getSource() == mi_co9) {
+            c2 = c2.yellow;
+        }
+        if (e.getSource() == mi_co10) {
+            c2 = c2.orange;
+        }
+        if (e.getSource() == b3) {
+           
+            s1 = t6.getText();
+            s2 = t7.getText();
+            l1.setText(s1 + ":");
+            l3.setText(s1 + " total:");
+            l2.setText(s2 + ":");
+            l4.setText(s2 + " total:");
+            l1.setVisible(true);
+            l2.setVisible(true);
+            l3.setVisible(true);
+            l4.setVisible(true);
+            t1.setVisible(true);
+            t2.setVisible(true);
+            t3.setVisible(true);
+            t4.setVisible(true);
+            t5.setVisible(true);
+            b1.setVisible(true);
+            l5.setVisible(false);
+            l6.setVisible(false);
+            t6.setVisible(false);
+            t7.setVisible(false);
+            b3.setVisible(false);
+
+            for (int i = 1; i <= 50; i++) {
+                b[i].setVisible(true);
+            }
+        }
+        if (e.getSource() == mi1) {
+            t6.setVisible(true);
+            System.out.println(s1);
+            b3.setVisible(true);
+        }
+        if (e.getSource() == mi2) {
+            t7.setVisible(true);
+            b3.setVisible(true);
+        }
+        if (e.getSource() == mi4) {
+            System.exit(0);
+        }
+        if (e.getSource() == mi3) {
+
+            temp1 = 0;
+            temp2 = 0;
+            total1 = 0;
+            total2 = 0;
+            count = 0;
+            t1.setText("1st");
+            t2.setText("2nd");
+            t3.setText("result");
+            t4.setText("1st total");
+            t5.setText("2nd total");
+            b1.enable();
+
+            for (int i = 1; i <= 50; i++) {
+                b[i].setBackground(Color.LIGHT_GRAY);
+            }
+        }
+
+        if (e.getSource() == b1) {
+            i = r.nextInt(5);
+            count++;
+            i = i + 1;
+            if (count % 2 != 0) {
+                temp1 = total1;
+                total1 = total1 + i;
+                t1.setText("" + i);
+                t4.setText("" + total1);
+                for (int k = 1; k <= 50; k++) {
+                    
+                    if (k == temp1) {
+                        b[k].setBackground(Color.LIGHT_GRAY);
+                    }
+                   
+                    if (k == total1) {
+                        b[k].setBackground(c2);
+                    }
+                }
+                if (total1 >= 50) {
+                    b[50].setBackground(c2);
+                    t3.setText(s1+" is winner");
+                    b1.disable();
+                }
+            } else {
+                temp2 = total2;
+                total2 = total2 + i;
+                t2.setText("" + i);
+                t5.setText("" + total2);
+
+                for (int k = 1; k <= 50; k++) {
+                   
+                    
+                    if (k == total2) {
+                        b[k].setBackground(c1);
+                    }
+                    if (k == temp2) {
+                        b[k].setBackground(Color.lightGray);
+                    }
+                }
+            }
+            if (total2 >= 50) {
+                t3.setText(s2+" is winner");
+                b[50].setBackground(c1);
+                b1.disable();
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.BufferedReader;
+
+public class ISRMultipleEntry{
+
+    public static void main(String[] args) throws IOException {
+        InputStreamReader isr = new InputStreamReader(System.in);
+        BufferedReader br = new BufferedReader(isr);
+
+        System.out.println("Enter size of array");
+        String s1 = br.readLine();
+        int size = Integer.parseInt(s1);
+
+        int A[] = new int[size];
+
+        int i = 0;
+        while (i < size) {
+            System.out.println("Enter element at " + i + " in array");
+            s1 = br.readLine();
+            A[i] = Integer.parseInt(s1);
+            i++;
+        }
+
+        i = 0;
+        while (i < size) {
+            System.out.print(A[i] + "\t");
+            i++;
+        }
+
+    }
+}

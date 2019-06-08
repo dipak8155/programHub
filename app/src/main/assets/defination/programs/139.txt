@@ -1,0 +1,10 @@
+
+public class ByteToStringByASCII 
+{
+    public static void main(String[] args) 
+    {
+        byte A[]={65,32,67, 45, 67, 87, 45};
+        String A1= new String(A);
+        System.out.println(A1);
+    }
+}

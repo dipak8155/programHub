@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class IntersectingElements {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter size of first and second arrays");
+        
+        int size1 = sc.nextInt();
+        int size2 = sc.nextInt();
+        
+        int a[] = new int[size1];
+        int b[] = new int[size2];
+
+        System.out.println("Enter values to first array\n");
+        int i = 0;
+        while (i != size1) {
+            System.out.print("element of array 1 at " + i + " : ");
+            a[i] = sc.nextInt();
+            i++;
+        }
+        System.out.println("\nEnter values to second array\n");
+        i = 0;
+        while (i != size2) {
+            System.out.print("element of array 2 at " + i + " : ");
+            b[i] = sc.nextInt();
+            i++;
+        }
+
+        System.out.println("Intersecting or common elements of given two array are as listed here");
+        for (i = 0; i < a.length; i++) {
+            for (int j = 0; j < b.length; j++) {
+                if (a[i] == b[j]) {
+                    System.out.println(a[i]);
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,15 @@
+
+import java.util.Hashtable;
+
+public class HashtableEx{
+
+    public static void main(String[] args) {
+
+        Hashtable h = new Hashtable();
+        h.put("India", "Delhi");
+        h.put("australia", "Canbara");
+        h.put("Fance", "Paris");
+        h.put("Uk", "London");
+        System.out.println(h.get("Australia"));
+    }
+}

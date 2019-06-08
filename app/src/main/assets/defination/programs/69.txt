@@ -1,0 +1,31 @@
+class A2 {
+
+    int a = 12;
+
+    void showa() {
+        System.out.println(a);
+    }
+
+}
+
+class B2 extends A2 {
+
+    void showa() {
+        System.out.println((2 * a));
+    }
+
+    int showa(int k) {
+        return k;
+    }
+
+}
+
+public class MethodOverridingCO{
+
+    public static void main(String[] args) {
+        A2 ob2 = new A2();
+        B2 ob1 = new B2();
+        ob1.showa();
+        ob1.showa();
+    }
+}

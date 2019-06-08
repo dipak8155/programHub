@@ -1,0 +1,54 @@
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.Frame;
+import java.awt.Label;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+
+public class MouseListenerEx extends Frame implements MouseListener
+{
+    
+    Button btn = new Button("SOURCE / COMPONENT");
+    FlowLayout fl = new FlowLayout();
+    Label signal = new Label();
+    MouseListenerEx(){
+        add(btn);
+        btn.setFocusable(false);
+        btn.addMouseListener(this);
+        add(signal);
+        setLayout(fl);
+        setSize(500,500);
+        show();
+    }
+    
+    public static void main(String[] args) {
+        MouseListenerEx ob1 = new MouseListenerEx();
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        btn.setBackground(Color.RED);
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+        btn.setBackground(Color.ORANGE);
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+        btn.setBackground(Color.MAGENTA);
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+        setBackground(Color.GREEN);
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+        setBackground(Color.RED);
+        btn.setBackground(Color.ORANGE);
+    }
+}

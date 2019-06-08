@@ -1,0 +1,33 @@
+
+public class UserDefinedMethodPalindrome{
+
+    public static void main(String args[]) {
+        D a = new D();
+        a.pali();
+
+    }
+}
+	
+class D {
+
+    int r, n;
+
+    void pali() {
+        int sum = 0, a = 0;
+        int i = 1;
+        while (i < 10) {
+            sum = 0;
+            n = i;
+            while (n > 0) {
+                r = n % 10;
+                sum = sum * 10 + r;
+                n = n / 10;
+            }
+            if (i == sum) {
+                a++;
+            }
+            i++;
+        }
+        System.out.println(a);
+    }
+}

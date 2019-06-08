@@ -1,0 +1,40 @@
+public class UserDefinedMethodSum
+{
+    public static void main(String[] args) 
+    {
+        A1 o = new A1();
+        
+        o.sum1();
+        o.sum2(14,46);
+        System.out.println(o.sum3());
+        System.out.println(o.sum4(14, 15));    
+    }
+}
+
+class A1
+{ 
+    int i=78;
+    int j=56;
+    
+    void sum1()
+    {
+        System.out.println((i+j));
+    }
+    
+    void sum2(int a, int b)
+    {
+        System.out.println((a+b));
+    }
+    
+    int sum3()
+    {
+        System.out.println((i+j));
+        return i+j;
+    }
+    
+    int sum4(int a, int b)
+    {
+        return a+b;
+    }
+}
+

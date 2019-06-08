@@ -1,0 +1,11 @@
+ Input by ISR
+ Simple Interest
+ Switch & arithmetic op
+ Fabonnaci Series
+ Multiple Input
+ Factorial
+ Palindrome range
+ Scanner
+ Arithmetic Operations - Scanner
+ Pattern
+ Simple Scanner

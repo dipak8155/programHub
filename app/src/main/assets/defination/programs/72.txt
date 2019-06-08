@@ -1,0 +1,13 @@
+public class NullPointerExceptionEx{
+    public static void main(String[] args) {
+        
+        try{
+            String s1 = null;
+            System.out.println(s1.charAt(1));
+        }
+        
+        catch(NullPointerException e){
+            System.out.println("Null Pointer Exception ...");
+        }
+    }
+}

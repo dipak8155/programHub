@@ -1,0 +1,23 @@
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+//understanding of main thread
+
+public class MainThread{
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the string: ");
+        String s = sc.nextLine();
+
+        for (int i = 0; i < s.length(); i++) {
+            try {
+                System.out.println(s.charAt(i));
+                Thread.sleep(500);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(thread_1.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }
+}

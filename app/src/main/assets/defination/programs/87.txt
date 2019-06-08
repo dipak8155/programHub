@@ -1,0 +1,41 @@
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+public class ThreadPriorityAndJoin{
+
+    public static void main(String[] args) {
+        A1 ob1 = new A1(); 
+        A2 ob2 = new A2();
+        
+        ob1.t.setPriority(1);
+        ob2.t1.setPriority(3);
+        
+        ob1.t.start();
+        ob2.t1.start();
+        try {
+            ob2.t1.join();
+        } catch (InterruptedException ex) {
+        }
+    }
+}
+
+
+class A2 implements Runnable {
+
+    Thread t1;
+
+    A2() {
+        t1 = new Thread(this);
+    }
+
+    public void run() {
+        for (int i = 1; i < 11; i++) {
+            try {
+                System.out.println("*");
+                Thread.sleep(500);
+            } catch (InterruptedException ex) {
+            }
+        }
+    }
+}
+

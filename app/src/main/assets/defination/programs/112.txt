@@ -1,0 +1,48 @@
+import java.applet.Applet;
+import java.awt.Graphics;
+
+public class AppletMethodScope extends Applet {
+
+    String s1, s2, s3, s4, s5;
+
+    @Override
+    public void init() {
+        s1 = "INIT";
+    }
+
+    @Override
+    public void start() {
+        s2 = "START";
+    }
+
+    @Override
+    public void paint(Graphics g) {
+        s3 = "PAINT";
+
+        if (s1 != null) {
+            g.drawString(s1, 50, 50);
+        }
+        if (s2 != null) {
+            g.drawString(s2, 50, 70);
+        }
+        if (s3 != null) {
+            g.drawString(s3, 50, 90);
+        }
+        if (s4 != null) {
+            g.drawString(s4, 50, 110);
+        }
+        if (s5 != null) {
+            g.drawString(s5, 50, 130);
+        }
+    }
+
+    @Override
+    public void stop() {
+        s4 = "STOP";
+    }
+
+    @Override
+    public void destroy() {
+        s5 = "STOP";
+    }
+}

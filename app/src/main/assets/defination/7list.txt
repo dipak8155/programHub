@@ -1,0 +1,12 @@
+ Arithmetic Excp.
+ NullPointer Excp.
+ ArrayIndexOutOfBounds Excp.
+ NumberFormat Excp.
+ StringIndexOutOfBounds Excp.
+ ClassNotFound Excp.
+ Custom Excp.
+ throws
+ finally
+ ArrayIndexOutOfBounds Excp.ex
+ throws - ex1
+ throws - ex2

@@ -1,0 +1,55 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class SwitchISRArithmeticOp{
+
+    public static void main(String[] args) throws IOException {
+
+        InputStreamReader isr = new InputStreamReader(System.in);
+        BufferedReader br = new BufferedReader(isr);
+
+        System.out.println("Enter a: ");
+        String s1;
+        s1 = br.readLine();
+        int a = Integer.parseInt(s1);
+
+        System.out.println("Enter b: ");
+        s1 = br.readLine();
+        int b = Integer.parseInt(s1);
+
+        System.out.println("Enter your choice: ");
+        s1 = br.readLine();
+        int ch = Integer.parseInt(s1);
+        int c;
+        switch (ch) {
+            case 1:
+                c = a + b;
+                System.out.println("Addition of nos is " + c);
+                break;
+
+            case 2:
+                c = a - b;
+                System.out.println("Subtraction is " + c);
+                break;
+
+            case 3:
+                c = a * b;
+                System.out.println("Multiplication is " + c);
+                break;
+
+            case 4:
+                c = a / b;
+                System.out.println("Divison is " + c);
+                break;
+
+            case 5:
+                c = a % b;
+                System.out.println("Modulous is " + c);
+                break;
+
+            default:
+                System.out.println("Invalid choice !!!");
+        }
+    }
+}

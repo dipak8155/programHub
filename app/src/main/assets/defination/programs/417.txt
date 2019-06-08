@@ -1,0 +1,27 @@
+public class ArrayAsArgumentMin{
+
+    static int arrmin(int a[]) {
+
+        int min = a[0];
+
+        for (int n = 0; n < 5; n++) {
+            if (min > a[n]) {
+                min = a[n];
+            }
+        }
+        return min;
+
+    }
+
+    public static void main(String[] args) {
+        int ans, i = 0;
+        int a[] = new int[5];
+        a[0] = 10;
+        a[1] = 2;
+        a[2] = 13;
+        a[3] = 4;
+        a[4] = 5;
+        ans = arrmin(a);
+        System.out.println(ans);
+    }
+}

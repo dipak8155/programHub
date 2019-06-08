@@ -1,0 +1,15 @@
+
+public class WebpageName {
+
+    public static void main(String[] args) {
+        String str[] = {"http://www.google.com", "https://aces.ac.in"};
+
+        for (int i = 0; i < str.length; i++) {
+            if (!str[i].matches("^https\\:(.+)")) {
+                System.out.println(str[i] + " is not secure webpage > http");
+            } else {
+                System.out.println(str[i] + " is secure webpage > https");
+            }
+        }
+    }
+}

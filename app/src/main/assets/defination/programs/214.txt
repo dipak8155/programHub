@@ -1,0 +1,21 @@
+public class PalindromeNumber {
+
+    public static void main(String[] args) {
+        int n = 1215;
+        int sum = 0;
+        int m = n;
+
+        while (n > 0) {
+            //int sum=0;
+            int r = n % 10;
+            sum = sum * 10 + r;
+            n = n / 10;
+
+        }
+        if (m == sum) {
+            System.out.println("palindrome");
+        } else {
+            System.out.println("not palindrome");
+        }
+    }
+}

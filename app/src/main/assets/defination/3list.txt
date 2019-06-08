@@ -1,0 +1,16 @@
+ static, 1D array - 1
+ static, 1D array - 2
+ Sum elements
+ Max element
+ Min element
+ Sum avg of elements
+ Sum - even positions
+ 2D dynamic
+ 2D static and sum
+ 2D static, mul of nonzero elements
+ 2D dynamic, values by loop
+ Sum of elements
+ Ascending order
+ Matrix multiplication
+ Advanced for - 1
+ Advanced for - 2

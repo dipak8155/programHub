@@ -1,0 +1,43 @@
+import java.util.Scanner;
+public class DigitCounterSolution
+{
+    public static void main(String[] args) 
+    {
+        System.out.println("Enter limit");
+        Scanner o1= new Scanner(System.in);
+        int limit = o1.nextInt();
+        System.out.println("You will have to enter total "+limit+ " words to check...");
+        String words[]= new String[limit];
+        
+        //store words from user input
+        char c;int count=0,count_1=0;
+        for(int i=0; i<limit; i++)
+        {
+            System.out.println("Enter word "+(i+1)+ " : ");
+            words[i]=o1.next();
+            
+            for(int j=0; j<words[i].length(); j++)
+            {
+                c=words[i].charAt(j);
+
+                if(c=='0' || c=='1' || c=='2' || c=='3' ||
+                            c=='4' || c=='5' || c=='6' || c=='7' ||
+                            c=='8' || c=='9' ) 
+                        {
+                            count++;
+                        }
+
+                        else
+                        {
+                            count_1++;
+                        }
+                }
+        }
+        
+        
+        
+        
+        System.out.println("No :: "+count);
+        System.out.println("Chars :: "+count_1);
+    }
+}

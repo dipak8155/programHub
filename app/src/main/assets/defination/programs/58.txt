@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class ScannerAll
+{
+	public static void main(String [] args)
+	{
+		Scanner sc = new Scanner(System.in);
+
+		int n1 = sc.nextInt();
+		float n2 = sc.nextFloat();
+		double n3 = sc.nextDouble();
+		byte n4 = sc.nextByte();
+		short n5 = sc.nextShort();
+		String n6 = sc.next();
+		sc.nextLine(); //to forward pointer to nextline
+	}
+}

@@ -1,0 +1,60 @@
+import java.awt.Color;
+import java.awt.Frame;
+import java.awt.GridLayout;
+import java.awt.Label;
+import java.awt.Scrollbar;
+import java.awt.event.AdjustmentEvent;
+import java.awt.event.AdjustmentListener;
+
+public class ScrollbarEx extends Frame implements AdjustmentListener {
+
+    Scrollbar red = new Scrollbar(Scrollbar.VERTICAL, 1, 1, 0, 255);
+    Scrollbar blue = new Scrollbar(Scrollbar.VERTICAL, 1, 1, 0, 255);
+    Scrollbar green = new Scrollbar(Scrollbar.VERTICAL, 1, 1, 0, 255);
+    Label l = new Label("Red");
+    GridLayout fl = new GridLayout();
+    Label l1 = new Label("Green");
+    Label l2 = new Label("Blue");
+    Label l3 = new Label("ans");
+
+    ScrollbarEx() {
+        add(red);
+        red.addAdjustmentListener(this);
+        add(l);
+        add(green);
+        green.addAdjustmentListener(this);
+        add(l1);
+        add(blue);
+        blue.addAdjustmentListener(this);
+        add(l2);
+        setLayout(fl);
+        setSize(500, 500);
+        show();
+        add(l3);
+    }
+
+    public static void main(String[] args) {
+        ScrollbarEx o1 = new ScrollbarEx();
+    }
+
+    @Override
+    public void adjustmentValueChanged(AdjustmentEvent e) {
+        int r = red.getValue();
+
+        Color c1 = new Color(r, 0, 0);
+        l.setBackground(c1);
+
+        int g = green.getValue();
+
+        Color c2 = new Color(0, g, 0);
+        l1.setBackground(c2);
+
+        int b = blue.getValue();
+
+        Color c3 = new Color(0, 0, b);
+        l2.setBackground(c3);
+
+        Color c4 = new Color(r, g, b);
+        l3.setBackground(c4);
+    }
+}

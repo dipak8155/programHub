@@ -1,0 +1,46 @@
+import java.awt.Color;
+import java.awt.Cursor;
+import java.awt.Frame;
+import java.awt.GridLayout;
+import java.awt.Label;
+import java.awt.TextField;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+public class KeyListenerEx extends Frame implements KeyListener {
+
+    GridLayout gl = new GridLayout(2, 1);
+    Label s1 = new Label("STRING");
+    Label s2 = new Label("CLONE");
+    TextField tf1 = new TextField(10);
+    TextField tf2 = new TextField(10);
+
+    KeyListenerEx() {
+        add(s1);
+        add(tf1);
+        tf1.addKeyListener(this);
+        add(s2);
+        add(tf2);
+        setLayout(gl);
+        setSize(500, 500);
+        show();
+    }
+
+    public static void main(String[] args) {
+        KeyListenerEx ob1 = new KeyListenerEx();
+
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+        tf2.setText(tf1.getText());
+    }
+}

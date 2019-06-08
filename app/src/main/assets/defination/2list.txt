@@ -1,0 +1,14 @@
+ Simple while and sum
+ Pattern - 1 while
+ for loop
+ Pattern - 2 for
+ break statement
+ Label block and break
+ continue
+ Pattern - 3 for
+ Sum of digits by while
+ Pattern - 4 for and if
+ Pattern - 5 for and while
+ while and if
+ Sum of odd and even digits
+ Number palindrome

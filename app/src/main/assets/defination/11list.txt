@@ -1,0 +1,5 @@
+ Applet
+ Applet - scope of method
+ Graphics in applet
+ Chessboard in color
+ Pattern in color

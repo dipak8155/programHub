@@ -1,0 +1,26 @@
+import java.applet.Applet;
+import java.awt.Color;
+import java.awt.Graphics;
+
+public class DesignEx extends Applet {
+
+    public void paint(Graphics g) {
+        setBackground(Color.DARK_GRAY);
+      
+        setSize(500, 500);
+       
+        g.fillRect(40, 40, 415, 415);
+        g.setColor(Color.white);
+        int i = 400, j = 400, count=20;
+        while(count!=0 &&(i!=0) && (j!=0)){
+            if(count%2==0)g.setColor(Color.CYAN);
+            else
+                g.setColor(Color.orange);
+            g.fillRect(i, j, 50, 50);
+            i-=count;
+            j-=count;
+            count--;
+        }
+        g.drawRect(45, 45, 405, 405);
+    }
+}

@@ -1,0 +1,18 @@
+
+public class MethodTypeOne{
+
+    public static void main(String[] args) {
+        A2 ob1 = new A2();
+        
+        //calling the method
+        ob1.show();
+    }
+
+}
+
+class A2 {
+
+    void show() {
+        System.out.println("without return-type without argument");
+    }
+}

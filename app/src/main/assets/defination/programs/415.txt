@@ -1,0 +1,27 @@
+public class UserDefinedMethodArmstrong{
+
+    public static void main(String[] args) {
+        E n = new E();
+        n.arm();
+    }
+}
+class E {
+
+    int sum;
+
+    void arm() {
+        int sum = 0, n = 153;
+        int i = n;
+        while (n > 0) {
+            int r = n % 10;
+            sum = sum + r * r * r;
+            n = n / 10;
+
+        }
+        // return sum;
+        if (i == sum) {
+            System.out.println("armstrong");
+        }
+    }
+
+}

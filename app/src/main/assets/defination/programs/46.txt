@@ -1,0 +1,30 @@
+public class Constrcutor{
+
+    public constrcutor_c_6() {
+        //created automatically, even if we don't create it
+        // and automatically executed when object of class is initialized
+    }
+
+    public static void main(String[] args) {
+        A6 ob1 = new A6();//constrctor will execute
+        
+        ob1.A6();//method called
+    }
+
+}
+
+
+class A6 {
+
+    A6() {
+        System.out.println("Constrctor can not be called");
+        System.out.println("Constructor has the same name as of class");
+        System.out.println("It has no return-type");
+        System.out.println("executed automatically when object of class is initialized");
+    }
+
+    void A6() {
+        System.out.println("Method A6 with return-type void is called");
+    }
+}
+
